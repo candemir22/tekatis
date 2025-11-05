@@ -1,71 +1,9 @@
 <html>
   <head>
     <title>Boundaries Simple</title>
-
-<style>
-let featureLayer;
-async function initMap() {
-    // Request needed libraries.
-    await google.maps.importLibrary("maps");
-    // Get the gmp-map element.
-    const mapElement = document.querySelector("gmp-map");
-    // Get the inner map.
-    const innerMap = mapElement.innerMap;
-    // Get the feature layer.
-    featureLayer = innerMap.getFeatureLayer(google.maps.FeatureType.LOCALITY);
-    // Define a style with purple fill and border.
-    const featureStyleOptions = {
-        strokeColor: '#810FCB',
-        strokeOpacity: 1.0,
-        strokeWeight: 3.0,
-        fillColor: '#810FCB',
-        fillOpacity: 0.5
-    };
-    // Apply the style to a single boundary.
-    featureLayer.style = (options) => {
-        if (options.feature.placeId == 'ChIJ0zQtYiWsVHkRk8lRoB1RNPo') { // Hana, HI
-            return featureStyleOptions;
-        }
-    };
-}
-initMap();
-
-</style>
-
-
-    <script>
-	
-	let featureLayer;
-async function initMap() {
-    // Request needed libraries.
-    await google.maps.importLibrary("maps");
-    // Get the gmp-map element.
-    const mapElement = document.querySelector("gmp-map");
-    // Get the inner map.
-    const innerMap = mapElement.innerMap;
-    // Get the feature layer.
-    featureLayer = innerMap.getFeatureLayer(google.maps.FeatureType.LOCALITY);
-    // Define a style with purple fill and border.
-    const featureStyleOptions = {
-        strokeColor: '#810FCB',
-        strokeOpacity: 1.0,
-        strokeWeight: 3.0,
-        fillColor: '#810FCB',
-        fillOpacity: 0.5
-    };
-    // Apply the style to a single boundary.
-    featureLayer.style = (options) => {
-        if (options.feature.placeId == 'ChIJ0zQtYiWsVHkRk8lRoB1RNPo') { // Hana, HI
-            return featureStyleOptions;
-        }
-    };
-}
-initMap();
-
-
-	
-	
-	</script>
+<
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
     <!-- prettier-ignore -->
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyA6myHzS10YXdcazAFalmXvDkrYCp5cLc8", v: "weekly"});</script>
